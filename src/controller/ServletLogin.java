@@ -14,12 +14,13 @@ public class ServletLogin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        if(checkloginDAO.validate(username,password)){
+        if(loginDAO.check_login(username,password)){
             response.sendRedirect("/template/welcomtopage.jsp");
         }
         else {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/template/formlogin.jsp");
-            requestDispatcher.include(request,response);
+//            requestDispatcher.include(request,response); neu dung thi bi loi font
+            requestDispatcher.forward(request,response);
         }
     }
 

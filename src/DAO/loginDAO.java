@@ -2,12 +2,12 @@ package DAO;
 
 import java.sql.*;
 
-public class checkloginDAO {
+public class loginDAO {
 
     private static Connection connection = null;
     private static PreparedStatement preparedStatement = null;
 
-    public static boolean validate(String user, String pass){
+    public static boolean check_login(String user, String pass){
 
         boolean status = false;
         connection = connectionDAO.getConnection();
