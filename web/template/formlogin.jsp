@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NDT</title>
     <link rel="stylesheet" type="text/css" href="/static/css/login.css">
-    <script src="/static/js/createCodeCaptcha.js"></script>
+    <script src="/static/js/codeCaptcha.js"></script>
 </head>
 <body>
 <h1>Đăng nhập</h1>
@@ -26,7 +26,7 @@
         <label><b>Captcha</b></label>
         <input type="text" name="captcha" required placeholder="Mã captcha">
         <p id="codeCaptcha" name="codeCaptcha" style="background: #cccccc; width: 30%; text-align: center; font-family: 'Lucida Handwriting';"></p>
-        <script src="/static/js/createCodeCaptcha.js"></script>
+        <script src="/static/js/codeCaptcha.js"></script>
         <p>Đăng kí tài khoản <a href="/template/formregister">tại đây</a>.</p>
         <div class="clearfix">
             <button type="submit">Đăng nhập</button>
