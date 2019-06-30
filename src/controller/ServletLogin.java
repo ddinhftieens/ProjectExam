@@ -19,8 +19,8 @@ public class ServletLogin extends HttpServlet {
         }
         else {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/template/formlogin.jsp");
-//            requestDispatcher.include(request,response); neu dung thi bi loi font
-            requestDispatcher.forward(request,response);
+            requestDispatcher.include(request,response);
+//            requestDispatcher.forward(request,response); khong bi loi font
         }
     }
 

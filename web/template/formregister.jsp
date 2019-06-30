@@ -11,6 +11,24 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/static/css/register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var captch = "";
+        var input = "";
+        $(document).ready(function () {
+            $("#signup").click(function () {
+                input = $("#captcha").val();
+                captch = $("#codeCaptcha").text();
+                if(input == captch){
+                    return true;
+                }
+                else {
+                    $("#captcha").val("");
+                    return false;
+                }
+            })
+        })
+    </script>
     <title>Register</title>
 </head>
 <body>
@@ -46,12 +64,12 @@
         <br><br><label><b>Số CMND/CCCD </b></label>
         <input type="text" id="IDcard" placeholder="Số CMND/CCCD" name="IDcard" required>
         <label><b>Captcha</b></label>
-        <input type="text" name="captcha" required placeholder="Mã captcha">
+        <input type="text" name="captcha" required placeholder="Mã captcha" id="captcha">
         <p id="codeCaptcha" name="codeCaptcha" style="background: #cccccc; width: 30%; text-align: center; font-family: 'Lucida Handwriting';"></p>
         <script src="/static/js/codeCaptcha.js"></script>
         <div class="clearfix">
 <%--            <button type="button" class="cancelbtn">Cancel</button>--%>
-            <button type="submit">Sign Up</button>
+            <button type="submit" id="signup">Sign Up</button>
         </div>
     </div>
 </form>

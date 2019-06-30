@@ -55,16 +55,16 @@ public class registerDAO {
         }
     }
 
-    public static void main(String[] args) {
-        connection = connectionDAO.getConnection();
-        try {
-            preparedStatement = connection.prepareStatement("select * from IF_people");
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
-                System.out.println(resultSet.getString(1) + resultSet.getString(2) +resultSet.getString(3) +resultSet.getString(4) +resultSet.getString(5) +resultSet.getString(6) +resultSet.getString(7) +resultSet.getString(8) +resultSet.getString(9) +resultSet.getString(10) +resultSet.getString(11));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void main(String[] args) {
+//        connection = connectionDAO.getConnection();
+//        try {
+//            preparedStatement = connection.prepareStatement("select * from IF_people");
+//            ResultSet resultSet = preparedStatement.executeQuery();
+//            while (resultSet.next()){
+//                System.out.println(resultSet.getString(1) + resultSet.getString(2) +resultSet.getString(3) +resultSet.getString(4) +resultSet.getString(5) +resultSet.getString(6) +resultSet.getString(7) +resultSet.getString(8) +resultSet.getString(9) +resultSet.getString(10) +resultSet.getString(11));
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

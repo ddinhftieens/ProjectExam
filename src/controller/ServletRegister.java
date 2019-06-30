@@ -23,16 +23,14 @@ public class ServletRegister extends HttpServlet {
         String phone = request.getParameter("phone");
         String job = request.getParameter("job");
         String IDcard = request.getParameter("IDcard");
-        System.out.println(!registerDAO.check_register(user,phone,IDcard));
         if(!registerDAO.check_register(user,phone,IDcard)&& pass.equals(repass)){
             registerDAO.add_customer(fristname,lastname,sex,date,address,phone,job,IDcard,user,pass,0);
             response.sendRedirect("/template/welcomtopage.jsp");
         }
         else{
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/template/formregister.jsp");
-            System.out.println("1");
-//            requestDispatcher.include(request,response);
-            requestDispatcher.forward(request,response);
+            requestDispatcher.include(request,response);
+//            requestDispatcher.forward(request,response); khong bi loi font
         }
     }
 
