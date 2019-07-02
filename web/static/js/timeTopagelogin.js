@@ -1,4 +1,4 @@
-var x = 10;
+var x = 5;
 var redirect = "template/formlogin";
 function redirect_login(){
     if(x>=0){
@@ -12,12 +12,18 @@ function redirect_login(){
 }
 function time(){
     var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById("timenow").innerHTML = "Time now : " + h + ":" + m + ":" + s;
+    var day = today.getDay() + 1;
+    var date = today.getDate();
+    var month = today.getMonth() + 1;
+    var year = today.getFullYear();
+    var hours = today.getHours();
+    var minutes = today.getMinutes();
+    var seconds = today.getSeconds();
+    minutes = checkTime(minutes);
+    seconds = checkTime(seconds);
+    month = checkTime(month);
+    date = checkTime(date);
+    document.getElementById("timenow").innerHTML = hours + ":" + minutes + ":" + seconds + " " + " Thứ "+ day +" "+ date + "/"+ month + "/" + year;
     setTimeout("time()",1000);
 }
 function checkTime(i) {

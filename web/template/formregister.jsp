@@ -32,7 +32,7 @@
     <title>Register</title>
 </head>
 <body>
-<h1 style="font-size: xx-large;text-align: center">Register</h1>
+<h1 style="font-size: xx-large;text-align: center">Đăng kí</h1>
 <form style="border: 1px solid #ccc" method="post">
     <div class="container">
         <label><b>Tài khoản</b></label>

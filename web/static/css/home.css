@@ -1,0 +1,47 @@
+.conteiner{
+    border: 2px solid #ccc;
+    padding: 16px;
+    font-size: 20px;
+}
+.areatimelimit{
+    border: 2px solid #ccc;
+    text-align: center;
+    font-size: 20px;
+    color: red;
+}
+.context{
+    font-size: 30px;
+    width: 90%;
+    float: left;
+    padding: 10px;
+}
+.controller{
+    font-size: 20px;
+    width: 10%;
+    float: left;
+    padding: 10px;
+}
+@media screen and (max-width: 600px) {
+    .context, .controller {
+        width: 100%;
+        height: auto;
+        font-size: 25px;
+    }
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.select{
+    font-size: 15px;
+}

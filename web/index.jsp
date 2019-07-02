@@ -15,16 +15,16 @@
     <style type="text/css">
       .container {
         padding: 16px;
-        font-size: 50px;
+        font-size: 20px;
         text-align: center;
       }
     </style>
   </head>
-  <body onload="redirect_login(),time()">
+  <body onload="redirect_login()">
   <div class="container">
-    <label><b>Welcom to page</b></label>
-    <p id=areaTimeout style="color: lawngreen; font-size: 80px"></p>
-    <div id="timenow"></div>
+    <label><b>Trang web bạn muốn đến sẽ tự động chuyển tới sau</b></label>
+    <p id=areaTimeout style="color: red; font-size: 60px"></p>
+<%--    <div id="timenow"></div>--%>
   </div>
   </body>
 </html>

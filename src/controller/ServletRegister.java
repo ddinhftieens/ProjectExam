@@ -12,6 +12,8 @@ import DAO.*;
 @WebServlet(name = "ServletRegister",urlPatterns = "/template/formregister")
 public class ServletRegister extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         String user = request.getParameter("username");
         String pass = request.getParameter("password");
         String repass = request.getParameter("repeatpass");
@@ -25,7 +27,7 @@ public class ServletRegister extends HttpServlet {
         String IDcard = request.getParameter("IDcard");
         if(!registerDAO.check_register(user,phone,IDcard)&& pass.equals(repass)){
             registerDAO.add_customer(fristname,lastname,sex,date,address,phone,job,IDcard,user,pass,0);
-            response.sendRedirect("/template/welcomtopage.jsp");
+            response.sendRedirect("/template/home.jsp");
         }
         else{
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/template/formregister.jsp");

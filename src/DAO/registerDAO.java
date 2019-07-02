@@ -17,7 +17,7 @@ public class registerDAO {
         boolean status = false;
         connection = connectionDAO.getConnection();
         try {
-            preparedStatement = connection.prepareStatement("select * from IF_people where UserName = ? or Phone = ? or IDcard = ?");
+            preparedStatement = connection.prepareStatement("select * from IF_customer where UserName = ? or Phone = ? or IDcard = ?");
             preparedStatement.setString(1,user);
             preparedStatement.setString(2,phone);
             preparedStatement.setString(3,IDcard);
@@ -35,7 +35,7 @@ public class registerDAO {
     public static void add_customer(String fristname, String lastname, String sex, String dateofbird, String address, String phone, String job, String IDcard, String username, String password, int checkuser){
         connection = connectionDAO.getConnection();
         try {
-            preparedStatement = connection.prepareStatement("insert into IF_people values (?,?,?,?,?,?,?,?,?,?,?)");
+            preparedStatement = connection.prepareStatement("insert into IF_customer values (?,?,?,?,?,?,?,?,?,?,?)");
             preparedStatement.setString(1,fristname);
             preparedStatement.setString(2,lastname);
             preparedStatement.setString(3,sex);
@@ -58,7 +58,7 @@ public class registerDAO {
 //    public static void main(String[] args) {
 //        connection = connectionDAO.getConnection();
 //        try {
-//            preparedStatement = connection.prepareStatement("select * from IF_people");
+//            preparedStatement = connection.prepareStatement("select * from IF_customer");
 //            ResultSet resultSet = preparedStatement.executeQuery();
 //            while (resultSet.next()){
 //                System.out.println(resultSet.getString(1) + resultSet.getString(2) +resultSet.getString(3) +resultSet.getString(4) +resultSet.getString(5) +resultSet.getString(6) +resultSet.getString(7) +resultSet.getString(8) +resultSet.getString(9) +resultSet.getString(10) +resultSet.getString(11));

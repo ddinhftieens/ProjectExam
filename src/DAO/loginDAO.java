@@ -12,7 +12,7 @@ public class loginDAO {
         boolean status = false;
         connection = connectionDAO.getConnection();
         try {
-            preparedStatement = connection.prepareStatement("select * from IF_people where UserName = ? and PassWord = ? and CheckUser = 1");
+            preparedStatement = connection.prepareStatement("select * from IF_customer where UserName = ? and PassWord = ? and CheckUser = 1");
             preparedStatement.setString(1,user);
             preparedStatement.setString(2,pass);
             ResultSet rs = preparedStatement.executeQuery();
