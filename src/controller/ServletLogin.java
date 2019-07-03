@@ -17,7 +17,7 @@ public class ServletLogin extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if(loginDAO.check_login(username,password)){
-            response.sendRedirect("/template/home");
+            response.sendRedirect("/template/page.jsp");
         }
         else {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/template/formlogin.jsp");

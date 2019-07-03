@@ -35,7 +35,7 @@
 </head>
 <body>
 <h1>Đăng nhập</h1>
-<form style="border: 1px solid #ccc" method="post">
+<form style="border: 1px solid #ccc" method="post" >
     <div class="container">
         <label><b>Tài khoản</b></label>
         <input type="text" placeholder="Tài khoản" id="username" name="username" required>

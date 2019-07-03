@@ -27,7 +27,7 @@ public class ServletRegister extends HttpServlet {
         String IDcard = request.getParameter("IDcard");
         if(!registerDAO.check_register(user,phone,IDcard)&& pass.equals(repass)){
             registerDAO.add_customer(fristname,lastname,sex,date,address,phone,job,IDcard,user,pass,0);
-            response.sendRedirect("/template/home.jsp");
+            response.sendRedirect("/template/exam.jsp");
         }
         else{
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/template/formregister.jsp");

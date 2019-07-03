@@ -65,4 +65,9 @@ public class QA_answerquestion {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    @Override
+    public String toString() {
+        return question +" "+answer_A+" " +answer_B+" "+answer_C+" "+answer_D +" "+answer;
+    }
 }

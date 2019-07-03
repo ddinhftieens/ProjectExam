@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Welcom to page</title>
     <link rel="stylesheet" type="text/css" href="/static/css/home.css">
-    <script src="/static/js/home.js"></script>
+    <script src="/static/js/exam.js"></script>
 </head>
 <body>
 <div class="conteiner">
@@ -46,13 +46,13 @@
         <option id="geography" name="geography" value="Địa lý">Địa lý</option>
         <option id="english" name="english" value="Tiếng anh">Tiếng anh</option>
     </select>
-    <form method="post" action="/template/home">
+    <form method="post">
         <div class="clearfix" id="div_start">
             <button type="button" onclick="load(),timelimit()" id="start" disabled>Bắt đầu</button>
         </div>
 
         <div class="clearfix" id="div_end" style="display: none;">
-            <button type="button" id="end" onclick="finish()">Kết thúc</button>
+            <button type="submit" id="end" onclick="finish()">Kết thúc</button>
         </div>
     </form>
 </div>
