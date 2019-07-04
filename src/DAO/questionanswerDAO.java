@@ -11,13 +11,15 @@ import model.*;
 public class questionanswerDAO {
 
     private static Connection connection = null;
-    private static List<QA_answerquestion> listQA = new  ArrayList();
+    private static List<QA_answerquestion> listQA;
 
-    public static List<QA_answerquestion> readQA(){
+    public static List<QA_answerquestion> readQA(String course, String subject){
+        listQA = new ArrayList<>();
+        String sql = "select * from class" + course + "_" + subject;
         connection = connectionDAO.getConnection();
         try {
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select * from class1_math");
+            ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()){
                 listQA.add(new QA_answerquestion(resultSet.getString(2),resultSet.getString(3),resultSet.getString(4),resultSet.getString(5),resultSet.getString(6),resultSet.getString(7)));
             }

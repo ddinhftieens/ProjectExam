@@ -23,7 +23,7 @@
   <body onload="redirect_login()">
   <div class="container">
     <label><b>Trang web bạn muốn đến sẽ tự động chuyển tới sau</b></label>
-    <p id=areaTimeout style="color: red; font-size: 60px"></p>
+    <p id="areaTimeout" style="color: red; font-size: 60px"></p>
 <%--    <div id="timenow"></div>--%>
   </div>
   </body>

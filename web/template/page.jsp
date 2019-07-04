@@ -16,7 +16,7 @@
 <body style="margin: 20px; border: 2px solid #cccccc">
 <div class="topnav" id="myTopnav">
     <a href="#home" class="active">Giới thiệu</a>
-    <a href="/template/home">Kiểm tra</a>
+    <a href="/template/selectClass">Kiểm tra</a>
     <a href="">Tiếng anh cho bé</a>
     <div class="dropdown">
         <button class="dropbtn">Tài liệu
@@ -36,7 +36,9 @@
     <p>Resize the browser window to see how it works.</p>
     <p>Hover over the dropdown button to open the dropdown menu.</p>
 </div>
-
+<div style="text-align: center;float: end;background-color: #4CAF50">
+    <label>@Copyright</label>
+</div>
 <script>
     function myFunction() {
         var x = document.getElementById("myTopnav");
